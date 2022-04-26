@@ -69,7 +69,7 @@ public class MemberController {
 		
 		MemberDTO dto = memberService.memberRead(m_no);
       model.addAttribute("dto", dto);
-		return "member/memberUpdate";
+		return "member/memberRead";
 	}
 	
 	@PostMapping("/memberUpdate")

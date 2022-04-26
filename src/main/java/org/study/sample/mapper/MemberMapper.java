@@ -17,7 +17,7 @@ public interface MemberMapper {
 	
 	public MemberDTO memberRead(String m_no);
 
-	public void mamberDelete(String m_no);
+	public void memberDelete(String m_no);
 
 	public void memberUpdate(MemberDTO dto);
 //	public MemberDTO login(MemberDTO dto);

@@ -59,7 +59,7 @@ public class MemberMapperTest {
 	
 //	@Test
 	public void membeDeleteTest() {
-		mapper.mamberDelete("2");
+		mapper.memberDelete("2");
 	}
 	
 	

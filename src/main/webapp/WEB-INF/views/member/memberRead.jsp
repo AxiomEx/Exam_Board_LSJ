@@ -14,6 +14,8 @@
 	회원 주소 : ${dto.m_address} <br>
 	회원 등록일 : ${dto.m_regDate} <br>
 	
+	
+	
 	<a href="/memberUpdate?m_no=${dto.m_no}"> 수정 </a>
 	
 	

@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Sample Project 대문</title>
+<link rel="stylesheet" href="${path}/resources/css/mine.css">
 </head>
 <body>
 	
@@ -14,6 +15,14 @@
 		
 		<a href="logout"> 로그아웃 </a>
 	</c:if>
+	
+	<br>
+	
+	<c:if test="${not empty sessionScope.m_id}">
+				
+		<a href="/boardList"> 글 목록보기 </a>
+	</c:if>
+	
 	
 	<c:if test="${empty sessionScope.m_id}">
 		<h2> 로그인 </h2>
@@ -34,6 +43,8 @@
 			alert('로그인 실패');
 		</c:if>
 	</script>
+
+
 
 </body>
 </html>
