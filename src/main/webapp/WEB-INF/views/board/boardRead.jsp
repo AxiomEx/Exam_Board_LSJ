@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	
 
 	<h1> 글 상세보기 </h1>
@@ -18,34 +17,6 @@
 	작성자 : ${dto.b_writer } <br>
 	작성일 : ${dto.b_regDate } <br>
 
-<c:if test="${not empty sessionScope.m_id}">
-	작성자 : <input type="text" name="b_writer" value="${sessionScope.m_id}" readonly="readonly">
-	내용 : <input type="text" name="r_content">
-	<input type="submit" value="등록">
-
-	<table border="1">
-		<tr>
-			<td> 댓글 번호 </td>
-			<td> 내용 </td>
-			<td> 작성자 </td>
-			<td> 등록일 </td>
-			<td>  </td>
-		</tr>
-		
-		<c:forEach var="replyList" items="${replyList}">	
-			<tr>
-				<td> 댓글 번호 </td>
-				<td> 내용 </td>
-				<td> 작성자 </td>
-				<td> 등록일 </td>
-				<td>  </td>
-			</tr>
-		</c:forEach>
-	</table>
-
-</c:if> <br>
-
-
 <c:if test="${sessionScope.m_id == dto.b_writer}">
 	<a href="/boardUpdate?b_no=${dto.b_no}"> 수정 </a>
 	<a href="/boardDelete?b_no=${dto.b_no}"> 삭제 </a>
@@ -53,6 +24,5 @@
 	
 	<a href="/boardList"> 목록으로 </a>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>

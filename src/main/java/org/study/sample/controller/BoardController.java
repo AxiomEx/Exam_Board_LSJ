@@ -31,7 +31,6 @@ public class BoardController {
 	@GetMapping("/boardInsert")
 	public String boardInsert() {
 		
-		
 		return "board/boardInsert";
 	}
 	
