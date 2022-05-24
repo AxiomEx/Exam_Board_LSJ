@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
 	
@@ -17,12 +18,10 @@
 	작성자 : ${dto.b_writer } <br>
 	작성일 : ${dto.b_regDate } <br>
 
-<c:if test="${sessionScope.m_id == dto.b_writer}">
 	<a href="/boardUpdate?b_no=${dto.b_no}"> 수정 </a>
 	<a href="/boardDelete?b_no=${dto.b_no}"> 삭제 </a>
-</c:if>
-	
-	<a href="/boardList"> 목록으로 </a>
+
+
 
 </body>
 </html>

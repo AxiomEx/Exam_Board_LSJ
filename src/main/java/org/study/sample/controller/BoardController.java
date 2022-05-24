@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.study.sample.model.BoardDTO;
 import org.study.sample.service.BoardService;
-import org.study.sample.service.MemberService;
 
 @Controller
 public class BoardController {
@@ -18,17 +17,17 @@ public class BoardController {
 	@Autowired
 	private BoardService BoardService;
 	
+	
 	@GetMapping("/boardList")
 	public String boardList(Model model) {
-//		System.out.println("타냐");
 		
 		List<BoardDTO> list = BoardService.boardList();
 		model.addAttribute("list", list);
 		
-		return "board/boardList";
+		return "board/boardList"; 
 	}
 	
-	@GetMapping("/boardInsert")
+	@GetMapping("/boardInsert") 
 	public String boardInsert() {
 		
 		return "board/boardInsert";
@@ -62,7 +61,7 @@ public class BoardController {
 	
 	@PostMapping("/boardUpdate")
 	public String boardUpdateProcess(BoardDTO dto) {
-		
+		System.out.println(dto);
 		BoardService.boardUpdate(dto);
 		
 		return "redirect:/boardRead?b_no=" + dto.getB_no(); 

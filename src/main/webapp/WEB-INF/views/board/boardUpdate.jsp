@@ -13,9 +13,9 @@
 
 	<h1> 글 수정 </h1>
 	
-	<form action="/boardUpdate" method="post">
+	<form action="boardUpdate" method="post">
 	
-	<input type="hidden" name="b_no">
+	<input type="hidden" name="b_no" value="${dto.b_no}">
 		글 제목 : <input type="text" name="b_title" value="${dto.b_title}"> <br>
 		글 내용 : <input type="text" name="b_content" value="${dto.b_content}"> <br>
 		작성자 : ${dto.b_writer} <br>

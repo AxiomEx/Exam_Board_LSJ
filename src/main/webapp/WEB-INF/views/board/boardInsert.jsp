@@ -15,7 +15,7 @@
 	 <form action="/boardInsert" method="post">
 	 	글 제목 : <input type="text" name="b_title"> <br>
 	 	글 내용 : <input type="text" name="b_content"> <br>
-	 	작성자 : <input type="text" name="b_writer" value="${sessionScope.m_id}" readonly="readonly"> <br>
+	 	작성자 : <input type="text" name="b_writer"> <br>
 	 	<input type="submit" value="작성하기">
 	 
 	 </form>
